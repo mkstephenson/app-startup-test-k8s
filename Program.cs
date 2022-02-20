@@ -3,7 +3,7 @@ using k8s.Models;
 using System.Data;
 using System.Text.Json;
 
-var config = KubernetesClientConfiguration.BuildConfigFromConfigFile("C:/Users/mkste/AppData/Roaming/Lens/kubeconfigs/887a4648-406c-44a4-8ec8-3e3b4104211c");
+var config = KubernetesClientConfiguration.BuildConfigFromConfigFile(args[0]);
 var client = new Kubernetes(config);
 
 var ns = new V1Namespace
